@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa; /* Light aqua background */
+            color: #333;
+            animation: bodyFadeIn 1s ease-in-out;
+        }
+
+        header {
+            background-color: #00bcd4; /* Aqua blue */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 4px solid #00838f; /* Darker aqua blue */
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        header:hover {
+            background-color: #00838f; /* Darker aqua blue on hover */
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        header h1:hover {
+            color: #b2ebf2; /* Light cyan */
+            transform: scale(1.05);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 0;
+            font-weight: 400;
+            letter-spacing: 1px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        header p:hover {
+            color: #b2ebf2; /* Light cyan */
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 400;
+            font-size: 1rem;
+            transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            color: #b2ebf2; /* Light cyan */
+            border-bottom: 2px solid #b2ebf2; /* Light cyan */
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            padding: 60px 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            background-color: #ffffff; /* White background */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: sectionFadeIn 1s ease-in-out;
+        }
+
+        section:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        section h2 {
+            color: #00bcd4; /* Aqua blue */
+            font-size: 2rem;
+            margin-top: 0;
+            font-weight: 600;
+            border-bottom: 2px solid #00bcd4; /* Aqua blue */
+            padding-bottom: 10px;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        section h2:hover {
+            color: #00838f; /* Darker aqua blue */
+            transform: translateY(-5px);
+        }
+
+        .project {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #b2ebf2; /* Light cyan */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease-in-out;
+            animation: projectFadeIn 1s ease-in-out;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            background-color: #80deea; /* Lighter cyan */
+        }
+
+        .project h3 {
+            color: #00838f; /* Darker aqua blue */
+            font-size: 1.5rem;
+            margin: 0 0 10px;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .project h3:hover {
+            color: #00bcd4; /* Aqua blue */
+        }
+
+        .project p {
+            color: #555;
+            margin: 0 0 10px;
+            font-size: 1rem;
+        }
+
+        .project a {
+            color: #00bcd4; /* Aqua blue */
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+        }
+
+        .project a:hover {
+            color: #00838f; /* Darker aqua blue */
+            text-decoration: underline;
+        }
+
+        @keyframes bodyFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes sectionFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes projectFadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                margin: 0 10px;
+            }
+
+            section {
+                padding: 30px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Kavya</h1>
+        <p>Your Vision, My Code</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Brief description of Project 1.</p>
+            <a href="project1.html">View Project</a>
+            <!-- Optionally include an image -->
+            <!-- <img src="screenshot1.png" alt="Screenshot of Project 1"> -->
+        </div>
+
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Brief description of Project 2.</p>
+            <a href="project2.html">View Project</a>
+            <!-- Optionally include an image -->
+            <!-- <img src="screenshot2.png" alt="Screenshot of Project 2"> -->
+        </div>
+
+        <div class="project">
+            <h3>Project 3</h3>
+            <p>Brief description of Project 3.</p>
+            <a href="project3.html">View Project</a>
+            <!-- Optionally include an image -->
+            <!-- <img src="screenshot3.png" alt="Screenshot of Project 3"> -->
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - My Portfolio</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffebee; /* Light red background */
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        header {
+            background-color: #e57373; /* Light red */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        header:hover {
+            background-color: #ef5350; /* Slightly darker light red */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffccbc; /* Light pinkish red */
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 500px; /* Reduced width for the contact page */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        section:hover {
+            background-color: #ffebee; /* Light red */
+            transform: scale(1.02);
+        }
+
+        h1, h2 {
+            margin-top: 0;
+            transition: color 0.3s ease;
+        }
+
+        h2 {
+            color: #e57373; /* Light red */
+            font-size: 1.8rem; /* Adjusted size */
+        }
+
+        h2:hover {
+            color: #ef5350; /* Slightly darker light red */
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #e57373; /* Light red border */
+            outline: none;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #e57373; /* Light red */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ef5350; /* Slightly darker light red */
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Kavya</h1>
+        <p>Your Vision, My Code</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+            <label for="name" align="left">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email" align="left">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message" align="left">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</body>
+
+</html>

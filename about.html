@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header {
+            background-color: #e91e63; /* Pink color */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 4px solid #c2185b; /* Darker pink */
+            transition: background-color 0.3s ease-in-out;
+            animation: headerFadeIn 1s ease-in-out;
+        }
+
+        header:hover {
+            background-color: #c2185b; /* Darker pink on hover */
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        header h1:hover {
+            color: #f8bbd0; /* Lighter pink */
+            transform: scale(1.05);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 0;
+            font-weight: 400;
+            letter-spacing: 1px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        header p:hover {
+            color: #f8bbd0; /* Lighter pink */
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 400;
+            font-size: 1rem;
+            transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            color: #f8bbd0; /* Lighter pink */
+            border-bottom: 2px solid #f8bbd0; /* Lighter pink */
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 800px; /* Reduced width */
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: sectionFadeIn 1s ease-in-out;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        section h2 {
+            color: #e91e63; /* Pink color */
+            font-size: 2rem;
+            margin-top: 0;
+            font-weight: 600;
+            border-bottom: 2px solid #e91e63; /* Pink color */
+            padding-bottom: 10px;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        section h2:hover {
+            color: #c2185b; /* Darker pink */
+            transform: translateY(-5px);
+        }
+
+        .profile-image-container {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-content {
+            text-align: left;
+            font-size: 1.1rem;
+            color: #555;
+            margin: 0 auto;
+            max-width: 800px;
+            animation: slideIn 1s ease-out;
+        }
+
+        .about-content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .about-content li {
+            margin-bottom: 10px;
+            transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+        }
+
+        .about-content li:hover {
+            color: #e91e63; /* Pink color */
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes sectionFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes headerFadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                margin: 0 10px;
+            }
+
+            section {
+                padding: 30px 10px;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Kavya</h1>
+        <p>Your Vision, My Code</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="profile-image-container">
+            <img src="C:\Users\kavya\OneDrive\Desktop\PORTFOLIO\kavss.png.jpg" alt="Profile Picture" class="profile-image">
+        </div>
+        <h2>About Me</h2>
+        <div class="about-content">
+            <ul>
+                <li><b>I hail from Tenali.</b></li>
+                <li><b>Completed my 10th grade at Sri Vivekananda School.<b></li>
+                <li><b>Pursued intermediate education at NRI Junior College.<b></li>
+                <li><b>Currently enrolled in a BTech program at Vignan University.<b></li>
+                <li><b>Aspiring to work in a leading multinational corporation.<b></li>
+                <li><b>Looking to leverage my skills and knowledge to contribute to innovative projects and grow professionally.<b></li>
+            </ul>
+        </div>
+    </section>
+
+</body>
+
+</html>
